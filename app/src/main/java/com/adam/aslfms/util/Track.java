@@ -112,6 +112,11 @@ public class Track {
         }
 
         public void setArtist(String artist) {
+            int idx = artist.indexOf(", ");
+            if (idx != -1 ) {
+                artist = artist.substring(0, idx);
+            }
+
             _track.mArtist = artist;
         }
 
